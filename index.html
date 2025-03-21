@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       body {
+            user-select: none; 
+            -webkit-user-select: none; 
+            -moz-user-select: none;
+            -ms-user-select: none;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background: rgb(255,255,255);
+            background: linear-gradient(129deg, rgba(255,255,255,1) 0%, rgba(126,215,252,0.8071603641456583) 100%);
+        }
+        
+       
+        img, a, p, h1, div {
+            /* pointer-events: none; */
+            -webkit-touch-callout: none;
+        }
+
+        header{
+            width: 100%;
+            height: 10vh;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(https://s.zakon.kz/Images/Paragraph/paragraph-logo.svg);
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: 45% 50%;
+            margin-bottom: 15px;
+            -webkit-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 39px 0px rgba(0,0,0,0.75);
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .header{
+            margin-top: 0;
+            width: 100%;
+            height: 20vh;
+            color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+        }
+
+        span{
+            text-transform: uppercase;
+        }
+        .footer{
+            margin-top: 50px;
+            width: 40%;
+            display: flex;
+            justify-content: start;
+            flex-direction: column;
+        }
+        .footer span, .footer p{
+            margin: 0;
+        }
+        .footer p{
+            margin-bottom: 20px;
+        }
+
+        .btn{
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .btn a{
+            width: 35%;
+            height: 70%;
+            padding: 5px;
+            font-size: 80%;
+            background-color: rgb(183, 183, 197);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+        }
+        .panel{
+            width: 40px;
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+
+        }
+        .panel a{
+            width: 30px;
+            height: 30px;
+            margin: 2px;
+        }
+        .panel a:hover{
+            border-bottom: 1px solid black;
+        }
+        .panel a:first-child{
+            background-image: url(img/printer.465x512.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .panel a:nth-child(2){
+            background-image: url(img/word-file.384x512.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .panel a:nth-child(3){
+            background-image: url(img/sms-tracking.512x440.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .panel a:nth-child(4){
+            background-image: url(img/star-outline.512x490.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .panel a:last-child{
+            background-image: url(img/info.512x512.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        @media screen and (max-width: 700px){
+            .btn a{
+                height: 100%;
+            }
+            header{
+                background-position: 20% 50%;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        ПАРАГРАФ
+    </header>
+    <div class="panel">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
+    </div>
+    <div class="header">
+        <img src="img/111.png" alt="Ошибка отображении картинки(обновите Ваш браузер)">
+    </div>
+    <div>
+        <h3>
+            СОВМЕСТНЫЙ ПРИКАЗ
+        </h3>
+        <h4>
+            О некоторых вопросах вывоза нефтепродуктов
+            с территории Республики Казахстан 
+        </h4>
+        
+        <p>В соответствии с подпунктом 11) пункта 1 статьи 6 и подпунктом 1) пункта 2 статьи 22 Закона Республики Казахстан «О национальной безопасности Республики Казахстан», со статьей 29 Договора о Евразийском экономическом союзе, а также разделом 10 Приложения 7 к вышеуказанному Договору, <b>ПРИКАЗЫВАЕМ:</b></p>
+        <p>1. Ввести изменения на вывоз с территории Республики Казахстан, в том числе в государства-члены Евразийского экономического союза:
+        </p>
+        <p>1) железнодорожным транспортом нефтепродуктов с кодами ТН ВЭД ЕАЭС 2710 12 согласно планам поставки, утверждаемым в соответствии с пунктом 7 статьи 18 Закона Республики Казахстан «О государственном регулировании производства и оборотов отдельных видов нефтепродуктов», а также вывоза нефтепродуктов в рамках установленном в государства-члены Евразийского экономического союза;</p>
+        <p>2) Определить оператора вывоза нефтепродуктов с кодами ТН ВЭД ЕАЭС 2710 12 согласно планам поставки, утверждаемым в соответствии с пунктом 7 статьи 18 Закона Республики Казахстан в лице ТОО «Орда Ару» БИН241140000282;</p>
+        <p>2. Комитету государственных доходов Министерства финансов Республики Казахстан при взаимодействии с Пограничной службой Комитета национальной безопасности Республики Казахстан в пределах своей компетенции принять необходимые меры по обеспечению исполнения пунктов 1 и 2 настоящего совместного приказа в установленном законодательством Республики Казахстан порядке.</p>
+        <p>3. Министерству внутренних дел Республики Казахстан в пределах своей компетенции оказать содействие по недопущению воспрепятствования изменению указанные в пунктах приказа.</p>
+        <p>4. Департаменту транспортировки и переработки нефти Министерства энергетики Республики Казахстан уведомить Министерство торговли и интеграции Республики Казахстан о необходимости в установленном порядке информировать Евразийскую экономическую комиссию о введении изменения, указанных в пунктах 1 и 2 настоящего совместного приказа.</p>
+        <p>5. Департаменту транспортировки и переработки нефти Министерства энергетики Республики Казахстан в установленном законодательством Республики Казахстан порядке обеспечить:</p>
+        <p>1) государственную регистрацию внесения изменения настоящего совместного приказа в Министерстве юстиции Республики Казахстан;</p>
+        <p>2) в течение десяти календарных дней со дня государственной регистрации настоящего совместного приказа в Министерстве юстиции Республики Казахстан представление в Департамент юридической службы Министерства энергетики Республики Казахстан сведений об исполнении мероприятий, предусмотренных подпунктами 1) и 2) настоящего пункта.</p>
+        <p>8. Контроль за исполнением настоящего совместного приказа возложить на курирующих соответствующее направление вице-министров энергетики, финансов, внутренних дел и заместителя Председателя Комитета национальной безопасности Республики Казахстан – Директора Пограничной службы.</p>
+        <p>9. Настоящий совместный приказ вводится в действие с 05 марта 2025 года.</p>
+        <div class="fio">
+            <p></p>
+            <p></p>
+        </div>
+        <div class="footer">
+            <span>«СОГЛАСОВАН»</span><p>Министерство транспорта 
+                <br>Республики Казахстан 
+                </p>
+            <span>«СОГЛАСОВАН»</span><p>Министерство торговли и интеграции <br>Республики Казахстан</p>
+            <span>«СОГЛАСОВАН»</span><p>Министерство национальной
+                экономики <br>Республики Казахстан
+                </p>
+        </div>
+        <div class="btn">
+            <a href="#">Доступ к документам и консультации от ведущих специалистов</a>
+            <a href="#">Обратная связь</a>
+        </div>
+</div>
+
+    <script>
+    const blockTime = 10000; // Время блокировки (10 секунд)
+const lastVisit = localStorage.getItem("lastVisit") || sessionStorage.getItem("lastVisit");
+
+if (lastVisit && Date.now() - lastVisit < blockTime) {
+    // Если прошло меньше blockTime, показываем сообщение о блокировке
+    document.body.innerHTML = "<h2>Доступ временно заблокирован. Попробуйте позже.</h2>";
+} else {
+    // Устанавливаем время входа (не обновляем, если вход запрещен)
+    localStorage.setItem("lastVisit", Date.now());
+    sessionStorage.setItem("lastVisit", Date.now()); // Дополнительная защита для мобильных устройств
+
+    // Отключаем контекстное меню
+    document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+    // Запрещаем жесты увеличения/выделения текста на тач-устройствах
+    document.addEventListener("touchstart", (event) => {
+        if (event.touches.length > 1) {
+            event.preventDefault();
+        }
+    }, { passive: false });
+
+    // Блокировка клавиш (Ctrl+S, Ctrl+P, Ctrl+U, Ctrl+C, F12 и т. д.)
+    document.addEventListener("keydown", (event) => {
+    if ((event.ctrlKey || event.metaKey) && ["s", "p", "u", "c"].includes(event.key.toLowerCase())) {
+        event.preventDefault();
+        event.stopPropagation(); // Останавливаем распространение события
+        return false;
+    }
+
+    if (event.key === "F12") {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+    }
+});
+
+
+
+    // Проверка выхода с сайта
+    window.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+            localStorage.setItem("lastVisit", Date.now());
+            sessionStorage.setItem("lastVisit", Date.now());
+        }
+    });
+
+    // Автоматический выход через 120 секунд (2 минуты)
+    setTimeout(() => {
+        localStorage.setItem("lastVisit", Date.now()); // Запоминаем время выхода
+        sessionStorage.setItem("lastVisit", Date.now()); // Запоминаем время выхода для мобильных
+        window.location.href = "blocked.html"; // Перенаправление на страницу блокировки
+    }, 10000);
+}
+
+
+    </script>
+</body>
+</html>
