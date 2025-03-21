@@ -207,7 +207,7 @@
 </div>
 
     <script>
-   const blockTime = 10000; // Время блокировки (10 секунд)
+   const blockTime = 120000; // Время блокировки (10 секунд)
 const lastVisit = localStorage.getItem("lastVisit") || sessionStorage.getItem("lastVisit");
 
 if (lastVisit && Date.now() - lastVisit < blockTime) {
@@ -261,7 +261,7 @@ if (lastVisit && Date.now() - lastVisit < blockTime) {
         localStorage.setItem("lastVisit", Date.now());
         sessionStorage.setItem("lastVisit", Date.now());
         window.location.href = "blocked.html";
-    }, 10000);
+    }, 120000);
 }
 
 
