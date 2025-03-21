@@ -207,16 +207,21 @@
 </div>
 
     <script>
-    const blockTime = 120000; // Время блокировки (10 секунд)
+   const blockTime = 10000; // Время блокировки (10 секунд)
 const lastVisit = localStorage.getItem("lastVisit") || sessionStorage.getItem("lastVisit");
 
 if (lastVisit && Date.now() - lastVisit < blockTime) {
-    // Если прошло меньше blockTime, показываем сообщение о блокировке
-    document.body.innerHTML = "<h2>Доступ временно заблокирован. Попробуйте позже.</h2>";
+    setTimeout(() => {
+        document.body.innerHTML = "<h2>Доступ временно заблокирован. Попробуйте позже.</h2>";
+    }, 100); // Небольшая задержка для мобильных
+
+    // Дополнительно показываем алерт на мобильных устройствах
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        alert("Доступ временно заблокирован. Попробуйте позже.");
+    }
 } else {
-    // Устанавливаем время входа (не обновляем, если вход запрещен)
     localStorage.setItem("lastVisit", Date.now());
-    sessionStorage.setItem("lastVisit", Date.now()); // Дополнительная защита для мобильных устройств
+    sessionStorage.setItem("lastVisit", Date.now());
 
     // Отключаем контекстное меню
     document.addEventListener("contextmenu", (event) => event.preventDefault());
@@ -228,22 +233,20 @@ if (lastVisit && Date.now() - lastVisit < blockTime) {
         }
     }, { passive: false });
 
-    // Блокировка клавиш (Ctrl+S, Ctrl+P, Ctrl+U, Ctrl+C, F12 и т. д.)
+    // Блокировка клавиш (Ctrl+S, Ctrl+P, Ctrl+U, Ctrl+C, F12)
     document.addEventListener("keydown", (event) => {
-    if ((event.ctrlKey || event.metaKey) && ["s", "p", "u", "c"].includes(event.key.toLowerCase())) {
-        event.preventDefault();
-        event.stopPropagation(); // Останавливаем распространение события
-        return false;
-    }
-
-    if (event.key === "F12") {
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-    }
-});
-
-
+        if (
+            (event.ctrlKey || event.metaKey) && 
+            ["s", "p", "u", "c"].includes(event.key.toLowerCase()) // Ctrl+S, Ctrl+P, Ctrl+U, Ctrl+C
+        ) {
+            event.preventDefault();
+            return false;
+        }
+        if (["F12", "PrintScreen"].includes(event.key)) { // Блокируем F12 и PrintScreen
+            event.preventDefault();
+            return false;
+        }
+    });
 
     // Проверка выхода с сайта
     window.addEventListener("visibilitychange", () => {
@@ -253,13 +256,14 @@ if (lastVisit && Date.now() - lastVisit < blockTime) {
         }
     });
 
-    // Автоматический выход через 120 секунд (2 минуты)
+    // Автоматический выход через 10 секунд
     setTimeout(() => {
-        localStorage.setItem("lastVisit", Date.now()); // Запоминаем время выхода
-        sessionStorage.setItem("lastVisit", Date.now()); // Запоминаем время выхода для мобильных
-        window.location.href = "blocked.html"; // Перенаправление на страницу блокировки
-    }, 120000);
+        localStorage.setItem("lastVisit", Date.now());
+        sessionStorage.setItem("lastVisit", Date.now());
+        window.location.href = "blocked.html";
+    }, 10000);
 }
+
 
 
     </script>
